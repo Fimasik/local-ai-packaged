@@ -5,7 +5,7 @@ set -e
 # === Variables ===
 PROJECT_DIR="/opt/local-ai-packaged"
 DOMAIN_EMAIL="efimchikd@gmail.com"   # <-- UPDATE THIS!
-GIT_REPO="https://github.com/Fimasik/local-ai-packaged.git"
+GIT_REPO="git@github.com:Fimasik/local-ai-packaged.git"
 
 # === System Update ===
 echo "[+] Updating system..."
