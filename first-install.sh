@@ -14,7 +14,6 @@ apt update && apt upgrade -y
 # === Install Required Packages ===
 echo "[+] Installing Docker & dependencies..."
 apt install -y docker.io docker-compose git python3 python3-pip ufw
-pip3 install docker
 
 # === Enable Docker ===
 systemctl enable docker
@@ -54,7 +53,7 @@ sed -i "s|POOLER_TENANT_ID=|POOLER_TENANT_ID=$(openssl rand -hex 12)|" .env
 sed -i "s|LETSENCRYPT_EMAIL=your-email-address|LETSENCRYPT_EMAIL=$DOMAIN_EMAIL|" .env
 
 # === Launch Services ===
-echo "[+] Starting services with CPU profile..."
+echo "[+] Starting services with CPU profile (Ollama runs elsewhere)..."
 python3 start_services.py --profile none
 
 echo "[✔] All services are running!"
