@@ -69,6 +69,8 @@ services:
     depends_on:
       n8n-import:
         condition: service_completed_successfully
+    environment:
+      - WEBHOOK_URL=${N8N_HOSTNAME:-":8001"}
 
   qdrant:
     image: qdrant/qdrant
